@@ -19,6 +19,7 @@ Route::get('/nim/{param1?/{$nim}', function ($param1 = '',$nim= '')  {
 Route::get('/about', function () {
     return view('halaman-about');
 });
+// saya telah berhasil membuatnya
 
 
 
