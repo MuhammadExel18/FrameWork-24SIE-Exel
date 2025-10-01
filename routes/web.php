@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QuestionController;
 Route::get('/', function () {
     return view('welcome');
 })->name('mahasiswa.show');
@@ -19,6 +21,10 @@ Route::get('/nim/{param1?/{$nim}', function ($param1 = '',$nim= '')  {
 Route::get('/about', function () {
     return view('halaman-about');
 });
+Route::get('/home', [HomeController::class, 'index']);
+Route::post('question/store', [QuestionController::class, 'store'])
+		->name('question.store');
+
 
 
 
