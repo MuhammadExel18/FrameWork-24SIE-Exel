@@ -45,8 +45,14 @@ class HomeController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
+
     {
-        //
+    // Redirect ke route yang memiliki alias 'home'
+	return redirect()->route('home');
+    //Redirect ke halaman sebelumnya
+	//return redirect()->back();
+    // Redirect ke URL eksternal
+	//return redirect()->away('https://www.example.com');
     }
 
     /**
