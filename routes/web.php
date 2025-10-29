@@ -7,6 +7,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\ProductsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,5 +37,4 @@ Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('user' , UserController::class);
 
-
-
+Route::resource('products', ProductsController::class);

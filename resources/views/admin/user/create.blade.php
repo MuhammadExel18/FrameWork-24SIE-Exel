@@ -1,5 +1,5 @@
 @extends('layouts.admin.app')
-@section('title', 'Tambah Pelanggan')
+{{-- @section('title', 'Tambah Pelanggan') --}}
 @section('content')
 <div class="py-4">
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
@@ -21,7 +21,7 @@
                     <p class="mb-0">Form untuk menambahkan data pelanggan baru.</p>
                 </div>
                 <div>
-                    <a href="{{route('pelanggan.index')}}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
+                    <a href="{{route('user.index')}}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
                 </div>
             </div>
         </div>
@@ -34,35 +34,35 @@
                             @csrf
                             <div class="row mb-4">
                                 <div class="col-lg-4 col-sm-6">
-                                    <!-- First Name -->
+                                    <!-- Nama -->
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama Lengkap</label>
-                                        <input name="name" type="text" id="first_name" class="form-control" required>
+                                        <label for="name" class="form-label">First name</label>
+                                        <input name="name" type="text" id="name" class="form-control" required>
                                     </div>
-
-                                    <!-- Last Name -->
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Last name</label>
-                                        <input name="email" type="email" id="email" class="form-control" required>
-                                    </div>
-                                </div>
 
                                     <!-- Email -->
                                     <div class="mb-3">
-                                        <label for="password" class="form-label">password</label>
+                                        <label for="email" class="form-label">Email</label>
+                                        <input name="email" type="text" id="email" class="form-control" required>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
                                         <input name="password" type="password" id="password" class="form-control" required>
                                     </div>
 
-                                    <!-- Phone -->
+                                    <!-- Password Confirm -->
                                     <div class="mb-3">
-                                        <label for="password_confirmation" class="form-label">confrime</label>
-                                        <input name="password_confirmation" type="password" id="password_confirmation" class="form-control">
+                                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                                        <input name="password_confirmation" type="password" id="password_confirmation" class="form-control" required>
                                     </div>
+                                </div>
 
                                     <!-- Buttons -->
                                     <div class="">
                                         <button type="submit" class="btn btn-primary">Simpan</button>
-                                        <a href="{{ route('pelanggan.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
+                                        <a href="{{ route('user.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
                                     </div>
                                 </div>
                             </div>
